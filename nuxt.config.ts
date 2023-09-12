@@ -11,15 +11,16 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
+      hello: '123',
       stripePk: process.env.STRIPE_PK_KEY
     }
   },
-  supabase: { redirect: false}
-  // app: {
-  //   head: {
-  //     script: [
-  //       { src: 'https://js.stripe.com/v3/', defer: true }
-  //     ],
-  //   }
-  // }
+  supabase: { redirect: false},
+  app: {
+    head: {
+      script: [
+        { src: 'https://js.stripe.com/v3/', defer: true }
+      ],
+    }
+  }
 })

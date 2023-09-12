@@ -63,7 +63,7 @@ const user = useSupabaseUser()
 
 watchEffect(() => {
   if (user.value) {
-    return navigateTo('/hello')
+    return navigateTo('/')
   }
 })
 

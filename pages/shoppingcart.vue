@@ -1,7 +1,7 @@
 <template>
   <MainLayout>
     <div id="ShoppingCartPage" class="mt-4 max-w-[1200px] mx-auto px-2">
-      <div v-if="false" class="h-[500px] flex items-center justify-center">
+      <div v-if="!userStore.cart.length" class="h-[500px] flex items-center justify-center">
         <div class="pt-20">
           <img
               class="mx-auto"
@@ -46,7 +46,7 @@
           </div>
 
           <div id="Items" class="bg-white rounded-lg p-4 mt-4">
-            <div v-for="product in products">
+            <div v-for="product in userStore.cart">
               <CartItem
                   :product="product"
                   :selectedArray="selectedArray"
